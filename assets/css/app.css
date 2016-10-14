@@ -1,0 +1,17 @@
+/* Write your styles */
+
+/* Prevent the unnecessary vertical scroll-bars */
+.admin-content,
+.admin-sidebar {
+    overflow-y: visible;
+}
+@media only screen and (min-width: 641px) {
+    .admin-offcanvas-bar {
+        min-height: 90%;
+    }
+}
+
+/* ensure cursor to links are normal pointers, looks more native */
+a {
+    cursor: default !important;
+}

@@ -1,0 +1,56 @@
+<template class="task-template">
+  <section id="encrypt-section" class="section js-section u-category-menu">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
+          Encrypt File
+        </h1>
+
+        <h3>The <code>globalShortcut</code> and <code>Menu</code> modules can be used to define keyboard shortcuts.</h3>
+
+        <p>
+          In Electron, keyboard shortcuts are called accelerators.
+          They can be assigned to actions in your application's Menu,
+          or they can be assigned globally so they'll be triggered even when
+          your app doesn't have keyboard focus.
+        </p>
+
+        <p>
+          Open the full documentation for the
+          <a class="u-exlink" href="http://electron.atom.io/docs/api/menu">Menu</a>,
+          <a class="u-exlink" href="http://electron.atom.io/docs/api/accelerator">Accelerator</a>,
+          and
+          <a class="u-exlink" href="http://electron.atom.io/docs/api/global-shortcut">globalShortcut</a>
+          APIs in your browser.
+        </p>
+
+      </div>
+    </header>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+          <div class="demo-controls">
+            <button class="demo-button" id="select-file">Select File</button>
+            <span class="demo-response" id="selected-file"></span>
+          </div>
+          <br/>
+          <input id="key" placeholder="Leave blank for random" />
+          <br/>
+          <input id="encrypt_file_path" placeholder="Leave blank for random name in same directory" />
+          <br/>
+          <button class="demo-button" id="submit-encrypt">Encrypt File</button>
+          <span class="demo-response" id="info-selection"></span>
+          <p>
+            Global shortcuts are detected even when the app doesn't have
+            keyboard focus, and they must be registered after the app's
+            `ready` event is emitted.
+          </p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+  require('./sections/menus/encrypt')
+</script>
+  </section>
+</template>

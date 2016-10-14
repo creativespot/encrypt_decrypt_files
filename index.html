@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!--<link rel="stylesheet" href="../assets/css/amazeui.css"/>-->
+    <!--<link rel="stylesheet" href="../assets/css/admin.css"/>-->
+    <!--<link rel="stylesheet" href="assets/css/nativize.css"/>-->
+    <!--<link rel="stylesheet" href="assets/css/app.css"/>-->
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+</head>
+
+<body>
+
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <strong>Amaze UI</strong> <small>后台管理模板</small>
+    </div>
+
+    <button style="-webkit-app-region: no-drag" class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div style="-webkit-app-region: drag" class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul style="-webkit-app-region: no-drag" class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+            <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
+            <li class="am-dropdown" data-am-dropdown>
+                <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                    <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+                </a>
+                <ul class="am-dropdown-content">
+                    <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
+                    <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+                    <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+            <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+            <li><a id="main-min-btn"><span class="am-icon-minus am-icon-sm"></span></a></li>
+            <li><a id="main-max-btn"><span class="am-icon-clone am-icon-sm"></span></a></li>
+            <li><a id="main-close-btn"><span class="am-icon-times am-icon-sm"></span></a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="am-cf admin-main">
+    <!-- sidebar start -->
+    <nav id="nav-sidebar">
+    </nav>
+    <!-- sidebar end -->
+
+    <!-- content start -->
+    <div class="admin-content" id="main">
+
+        <footer class="admin-content-footer">
+            <hr>
+            <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+        </footer>
+    </div>
+    <!-- content end -->
+
+</div>
+
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+</body>
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+<!--<script src="assets/index.js"></script>-->
+
 </html>
