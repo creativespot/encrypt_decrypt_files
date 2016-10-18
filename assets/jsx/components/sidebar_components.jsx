@@ -14,7 +14,7 @@ var SideBar = React.createClass({
     },
     render: function () {
         return (
-            <div className="admin-sidebar am-offcanvas" id="admin-offcanvas">
+            <div id="admin-offcanvas">
                 <div className="am-offcanvas-bar admin-offcanvas-bar">
                     <NavList data={this.state.data}/>
                     <SidebarPanel icon="am-icon-bookmark" title="公告" text="时光静好，与君语；细水流年，与君同。—— Amaze UI" />
