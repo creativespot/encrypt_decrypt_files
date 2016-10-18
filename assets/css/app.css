@@ -11,6 +11,13 @@
     }
 }
 
+@media only screen and (min-width: 641px) {
+    .am-topbar-right {
+        margin-right: 0px;
+        padding-right: 10px;
+    }
+}
+
 /* ensure cursor to links are normal pointers, looks more native */
 a {
     cursor: default !important;
